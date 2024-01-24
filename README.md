@@ -1,34 +1,61 @@
-# starknet-token-contract
+# Starknet Token Contract
 
-## Environment Setup
+This repository contains the source code of an ERC20 smart contract.
 
-Use [Dev Containers](https://code.visualstudio.com/docs/devcontainers/create-dev-container) to setup a development enviroment quickly.
+This project is licensed under [GPL](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-Or install necessary tools manually by following the instructions in [`.devcontainer/Dockerfile`](/.devcontainer/Dockerfile).
+I use [Cairo](https://www.cairo-lang.org), [Scarb](https://docs.swmansion.com/scarb) and [Starkli](https://book.starkli.rs/introduction) for developing the contract.
 
+You can find detailed information about [Cairo](https://www.cairo-lang.org), [Scarb](https://docs.swmansion.com/scarb) and [Starkli](https://book.starkli.rs/introduction) below.
 
-## Developing
+The source code of the smart contract is at https://github.com/BerzanOrg/starknet-token-contract.
 
-Build the project by running the command below.
+## Cairo
+
+Cairo is a programming language for writing provable programs.
+
+Cairo is Rust-inspired, allowing developers to write [Starknet](https://www.starknet.io/en) smart contracts in a safe and convenient manner.
+
+## Scarb
+
+Scarb is the project management tool for the Cairo language. 
+
+Scarb manages your dependencies, compiles your projects and works as an extensible platform assisting in development.
+
+## Starkli
+
+Starkli is a command line tool for interacting with [Starknet](https://www.starknet.io/en), powered by [starknet-rs](https://github.com/xJonathanLEI/starknet-rs).
+
+Starkli allows you to query [Starknet](https://www.starknet.io/en) and make transactions with ease. It's fast, easy to install, and intuitive to use.
+
+## Documentation
+
+https://book.cairo-lang.org
+
+https://docs.swmansion.com/scarb
+
+https://book.starkli.rs/introduction
+
+## Usage
+
+### Build
 
 ```shell
-scarb build
+$ scarb build
 ```
 
-Declare the class hash of the contract by running the command below.
+### Declare
 
 ```shell
-starkli declare target/dev/token_Token.contract_class.json
+$ starkli declare target/dev/token_Token.contract_class.json
 ```
 
-Deploy an instance of the contract by running the command below.
+### Deploy
 
 ```shell
-starkli deploy <CLASS_HASH> <CONSTRUCTORS...>
+$ starkli deploy <CLASS_HASH> <TOKEN_NAME> <TOKEN_SYMBOL> <TOKEN_SUPPLY> <TOKEN_RECIPIENT>
 ```
 
-## License
+## Note
 
-[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
-
-Made with ❤️ by [**Berzan**](https://berzan.org).
+Built with love, sweat and tears by [Berzan](https://berzan.org).
